@@ -7,6 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginModule } from './login/login.module';
 import { MainpageModule } from './mainpage/mainpage.module';
+import { LikepageModule } from './likepage/likepage.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MainpageModule } from './mainpage/mainpage.module';
     AppRoutingModule,
     NgbModule,
     LoginModule,
-    MainpageModule
+    MainpageModule,
+    LikepageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
