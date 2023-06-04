@@ -8,7 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginModule } from './login/login.module';
 import { MainpageModule } from './mainpage/mainpage.module';
 import { LikepageModule } from './likepage/likepage.module';
-
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,9 @@ import { LikepageModule } from './likepage/likepage.module';
     NgbModule,
     LoginModule,
     MainpageModule,
-    LikepageModule
+    LikepageModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
