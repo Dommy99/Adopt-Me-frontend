@@ -9,6 +9,7 @@ interface Animal {
   age: string;
   breed: string;
   species: string;
+  img: string;
   adoption: {
     id: number;
     location: string;
