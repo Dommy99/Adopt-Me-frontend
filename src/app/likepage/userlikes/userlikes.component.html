@@ -1,101 +1,25 @@
-<div class="d-flex">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
+<div class="d-flex" >
+  <div class="row row-cols-1 row-cols-md-3 g-4" >
+    <div class="col" *ngFor="let animal of animals">
       <div class="card">
-        <img
-          src="../../../assets/img/puppy.jpg"
-          class="card-img-top"
-          alt="..."
-        />
+        <img src="../../../assets/img/puppy.jpg" class="card-img-top" alt="..." />
         <div class="card-body">
-          <h5 class="card-title">Pet name: {{animal?.data[0]?.name}}</h5>
-          <p class="card-text">Adoption Location: Austin</p>
-          <p class="card-text">Species: {{animal?.data[0]?.species}}</p>
-          <p class="card-text">Gender: {{animal?.data[0]?.gender}}</p>
-          <p class="card-text">Main Color: {{animal?.data[0]?.color}}</p>
-          <p class="card-text">Breed: {{animal?.data[0]?.breed}}</p>
-          <p class="card-text">Age: {{animal?.data[0]?.age}}</p>
+          <h5 class="card-title">Pet name: {{animal.name}}</h5>
+          <p class="card-text">Adoption Location: {{animal.adoption.location}}</p>
+          <p class="card-text">Species: {{animal.species}}</p>
+          <p class="card-text">Gender: {{animal.gender}}</p>
+          <p class="card-text">Main Color: {{animal.color}}</p>
+          <p class="card-text">Breed: {{animal.breed}}</p>
+          <p class="card-text">Age: {{animal.age}}</p>
 
           <p class="card-text">Contact Information:</p>
-          <p class="card-text">Number: {{animal?.data[0]?.adoption.number}}</p>
+          <p class="card-text">Number: {{animal.adoption.number}}</p>
           <!-- name of adoption agency -->
-          <a href="#" class="card-link">{{animal?.data[0]?.adoption.name}}</a> 
-          <a href="#" class="card-link">{{animal?.data[0]?.adoption.email}}</a>
+          <a href="#" class="card-link">{{animal.adoption.name}}</a> 
+          <a href="#" class="card-link">{{animal.adoption.email}}</a>
           <button class="btn btn-primary" type="submit">Remove</button>
         </div>
       </div>
     </div>
-    <div class="col">
-        <div class="card">
-          <img
-            src="../../../assets/img/puppy.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Pet name: Lucky</h5>
-            <p class="card-text">Adoption Location: Austin</p>
-            <p class="card-text">Species: Dog</p>
-            <p class="card-text">Gender: Male</p>
-            <p class="card-text">Main Color: Brown</p>
-            <p class="card-text">Breed: Rottweiler</p>
-            <p class="card-text">Age: 1</p>
-  
-            <p class="card-text">Contact Information:</p>
-            <p class="card-text">Number: 211-111-1111</p>
-            <a href="#" class="card-link">Adoption website</a>
-            <a href="#" class="card-link">Email</a>
-            <button class="btn btn-primary" type="submit">Remove</button>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img
-            src="../../../assets/img/puppy.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Pet name: Lucky</h5>
-            <p class="card-text">Adoption Location: Austin</p>
-            <p class="card-text">Species: Dog</p>
-            <p class="card-text">Gender: Male</p>
-            <p class="card-text">Main Color: Brown</p>
-            <p class="card-text">Breed: Rottweiler</p>
-            <p class="card-text">Age: 1</p>
-  
-            <p class="card-text">Contact Information:</p>
-            <p class="card-text">Number: 211-111-1111</p>
-            <a href="#" class="card-link">Adoption website</a>
-            <a href="#" class="card-link">Email</a>
-            <button class="btn btn-primary" type="submit">Remove</button>
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <img
-            src="../../../assets/img/puppy.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Pet name: Lucky</h5>
-            <p class="card-text">Adoption Location: Austin</p>
-            <p class="card-text">Species: Dog</p>
-            <p class="card-text">Gender: Male</p>
-            <p class="card-text">Main Color: Brown</p>
-            <p class="card-text">Breed: Rottweiler</p>
-            <p class="card-text">Age: 1</p>
-  
-            <p class="card-text">Contact Information:</p>
-            <p class="card-text">Number: 211-111-1111</p>
-            <a href="#" class="card-link">Adoption website</a>
-            <a href="#" class="card-link">Email</a>
-            <button class="btn btn-primary" type="submit">Remove</button>
-          </div>
-        </div>
-      </div>
   </div>
 </div>

@@ -1,13 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+interface Animal {
+  id: number;
+  name: string;
+  gender: string;
+  color: string;
+  age: string;
+  breed: string;
+  species: string;
+  adoption: {
+    id: number;
+    location: string;
+    number: string;
+    email: string;
+    name: string;
+  }
+}
+
+interface ApiResponse {
+  data: Animal[];
+  message: string;
+}
+
+
 @Component({
   selector: 'app-userlikes',
   templateUrl: './userlikes.component.html',
   styleUrls: ['./userlikes.component.css']
 })
+
 export class UserlikesComponent implements OnInit {
-  animal: any;
+  animals: Animal[] = [];
 
   constructor(private http: HttpClient){}
 
@@ -17,10 +41,11 @@ export class UserlikesComponent implements OnInit {
 
   getAnimals(): void {
     this.http
-      .get('http://localhost:8080/api/animal/')
+      .get<ApiResponse>('http://localhost:8080/api/animal/')
       .subscribe((response) => {
         console.log(response);
-        this.animal = response;
+        this.animals = response.data;
       });
   }
 }
+
