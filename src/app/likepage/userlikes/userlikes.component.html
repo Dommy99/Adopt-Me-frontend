@@ -8,18 +8,19 @@
           alt="..."
         />
         <div class="card-body">
-          <h5 class="card-title">Pet name: Lucky</h5>
+          <h5 class="card-title">Pet name: {{animal?.data[0]?.name}}</h5>
           <p class="card-text">Adoption Location: Austin</p>
-          <p class="card-text">Species: Dog</p>
-          <p class="card-text">Gender: Male</p>
-          <p class="card-text">Main Color: Brown</p>
-          <p class="card-text">Breed: Rottweiler</p>
-          <p class="card-text">Age: 1</p>
+          <p class="card-text">Species: {{animal?.data[0]?.species}}</p>
+          <p class="card-text">Gender: {{animal?.data[0]?.gender}}</p>
+          <p class="card-text">Main Color: {{animal?.data[0]?.color}}</p>
+          <p class="card-text">Breed: {{animal?.data[0]?.breed}}</p>
+          <p class="card-text">Age: {{animal?.data[0]?.age}}</p>
 
           <p class="card-text">Contact Information:</p>
-          <p class="card-text">Number: 211-111-1111</p>
-          <a href="#" class="card-link">Adoption website</a>
-          <a href="#" class="card-link">Email</a>
+          <p class="card-text">Number: {{animal?.data[0]?.adoption.number}}</p>
+          <!-- name of adoption agency -->
+          <a href="#" class="card-link">{{animal?.data[0]?.adoption.name}}</a> 
+          <a href="#" class="card-link">{{animal?.data[0]?.adoption.email}}</a>
           <button class="btn btn-primary" type="submit">Remove</button>
         </div>
       </div>
