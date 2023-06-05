@@ -1,16 +1,16 @@
 <div class="d-flex">
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-          <h5 class="card-title">{{animal?.data[0]?.name}}</h5>
-          <h6 class="card-subtitle mb-2 text-body-secondary">{{animal?.data[0]?.species}}</h6>
-          <p class="card-text">{{animal?.data[0]?.gender}}</p>
-          <p class="card-text">{{animal?.data[0]?.color}}</p>
-          <p class="card-text">{{animal?.data[0]?.breed}}</p>
-          <p class="card-text">{{animal?.data[0]?.age}}</p>
-        </div>
-      </div>
-<app-img-carousel></app-img-carousel>
-<button class="btn btn-primary" type="submit">Undo</button>
-<button class="btn btn-primary" type="submit">Like</button>
-<button class="btn btn-primary" type="submit">Skip</button>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{currentAnimal?.name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{currentAnimal?.species}}</h6>
+      <p class="card-text">{{currentAnimal?.gender}}</p>
+      <p class="card-text">{{currentAnimal?.color}}</p>
+      <p class="card-text">{{currentAnimal?.breed}}</p>
+      <p class="card-text">{{currentAnimal?.age}}</p>
+    </div>
+  </div>
+  <app-img-carousel (activeAnimal)="onActiveAnimalChanged($event)"></app-img-carousel>
+  <button class="btn btn-primary" type="submit">Undo</button>
+  <button class="btn btn-primary" type="submit">Like</button>
+  <button class="btn btn-primary" type="submit">Skip</button>
 </div>

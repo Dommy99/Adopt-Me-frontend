@@ -1,6 +1,7 @@
+// login-img-carousel.component.ts
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { Animal } from '../../../app/animal/animal.module';
 
 @Component({
   selector: 'app-login-img-carousel',
@@ -8,20 +9,14 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./login-img-carousel.component.css']
 })
 export class LoginImgCarouselComponent implements OnInit {
-  animal: any;
+  currentAnimal: Animal | null = null;
 
-  constructor(private http: HttpClient){}
+  constructor(private http: HttpClient) {}
 
   ngOnInit(): void { 
-    this.getAnimals();
   }
 
-  getAnimals(): void {
-    this.http
-      .get('http://localhost:8080/api/animal/')
-      .subscribe((response) => {
-        console.log(response);
-        this.animal = response;
-      });
+  onActiveAnimalChanged(newAnimal: Animal): void {
+    this.currentAnimal = newAnimal;
   }
 }

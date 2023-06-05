@@ -1,23 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+// img-carousel.component.ts
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-interface Animal {
-  id: number;
-  name: string;
-  gender: string;
-  color: string;
-  age: string;
-  breed: string;
-  species: string;
-  img: string;
-  adoption: {
-    id: number;
-    location: string;
-    number: string;
-    email: string;
-    name: string;
-  }
-}
+import { Animal } from '../../../app/animal/animal.module';
 
 interface ApiResponse {
   data: Animal[];
@@ -30,8 +14,8 @@ interface ApiResponse {
   styleUrls: ['./img-carousel.component.css']
 })
 export class ImgCarouselComponent implements OnInit {
-
   animals: Animal[] = [];
+  @Output() activeAnimal = new EventEmitter<Animal>();
 
   constructor(private http: HttpClient) {}
 
@@ -46,5 +30,10 @@ export class ImgCarouselComponent implements OnInit {
         console.log(response);
         this.animals = response.data;
       });
+  }
+
+  onSlideChange(slideEvent: any): void {
+    const currentSlideIndex = slideEvent.current; 
+    this.activeAnimal.emit(this.animals[currentSlideIndex]);
   }
 }
