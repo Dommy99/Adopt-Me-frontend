@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { Subscription } from 'rxjs';
+import { AuthService } from '../../../app/auth.service';
 interface Animal {
   id: number;
   name: string;
@@ -31,22 +32,39 @@ interface ApiResponse {
   styleUrls: ['./userlikes.component.css']
 })
 
-export class UserlikesComponent implements OnInit {
+export class UserlikesComponent implements OnInit, OnDestroy {
   animals: Animal[] = [];
+  private userId!: number;
+  private subscription!: Subscription;
 
-  constructor(private http: HttpClient){}
+  constructor(
+    private http: HttpClient,
+    private authService: AuthService
+  ) { }
 
   ngOnInit(): void { 
-    this.getAnimals();
+    this.subscription = this.authService.userId.subscribe(userId => {
+      if (userId !== null) {
+        this.userId = userId;
+        this.getAnimals();
+      }
+    });
+}
+
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
   }
 
   getAnimals(): void {
-    this.http
-      .get<ApiResponse>('http://localhost:8080/api/animal/')
-      .subscribe((response) => {
-        console.log(response);
-        this.animals = response.data;
-      });
+    if (this.userId) {
+      this.http
+        .get<ApiResponse>(`http://localhost:8080/api/user/${this.userId}/likes`)
+        .subscribe((response) => {
+          console.log(response);
+          this.animals = response.data;
+        });
+    }
   }
 }
 
