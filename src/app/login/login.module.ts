@@ -5,6 +5,7 @@ import { ImgCarouselComponent } from './img-carousel/img-carousel.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -12,12 +13,13 @@ import { HomepageComponent } from './homepage/homepage.component';
   declarations: [
     LoginRegisterComponent,
     ImgCarouselComponent,
-    HomepageComponent
+    HomepageComponent    
   ],
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     LoginRegisterComponent,

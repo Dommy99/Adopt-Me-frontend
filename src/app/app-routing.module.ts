@@ -10,6 +10,10 @@ const routes: Routes = [
     component: HomepageComponent
   },
   {
+    path: '',
+    component: HomepageComponent
+  },
+  {
     path: 'login-img-carousel',
     component: LoginImgCarouselComponent
   },
