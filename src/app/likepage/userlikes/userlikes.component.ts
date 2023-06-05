@@ -63,6 +63,7 @@ export class UserlikesComponent implements OnInit, OnDestroy {
         .subscribe((response) => {
           console.log(response);
           this.animals = response.data;
+          console.log('Animals: ', this.animals);
         });
     }
   }
