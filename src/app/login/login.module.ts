@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CardComponent } from './card/card.component';
 
 
 
@@ -13,7 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     LoginRegisterComponent,
     ImgCarouselComponent,
-    HomepageComponent    
+    HomepageComponent,
+    CardComponent    
   ],
   imports: [
     CommonModule,

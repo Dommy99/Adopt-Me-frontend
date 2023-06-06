@@ -10,6 +10,7 @@ import { MainpageModule } from './mainpage/mainpage.module';
 import { LikepageModule } from './likepage/likepage.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     MainpageModule,
     LikepageModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
