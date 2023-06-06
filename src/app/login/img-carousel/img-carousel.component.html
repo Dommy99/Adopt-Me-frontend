@@ -1,46 +1,16 @@
-<!-- <div id="carouselExampleDark" class="carousel carousel-dark slide ">
-    <div class="carousel-inner">
-    <div class="carousel-item" 
-         [class.active]="i === 0" 
-         data-bs-interval="10000" 
-         *ngFor="let animal of animals; let i = index">
-      <img [src]="animal.img" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>{{animal.name}}</h5>
-      </div>
+<!-- with help from https://codepen.io/julessmiles/pen/yJqQKK -->
+<div class="tbg">
+  <div class="theader">
+    <i class="fa fa-cog" aria-hidden="true"></i>
+    <i class="fa fa-comments" aria-hidden="true"></i>
+  </div>
+  <div class="tbgwrap">
+      <app-card  [parentSubject]="parentSubject" [animals]="animals">
+      </app-card>
+    <div class="tcontrols">
+      <div (click)='cardAnimation("swipeleft")'  class="tno"><i class="fa fa-times" aria-hidden="true"></i></div>
+      <div class="ti"><i class="fa fa-info" aria-hidden="true"></i></div>
+      <div (click)='cardAnimation("swiperight")' class="tyes"><i class="fa fa-heart" aria-hidden="true"></i></div>
     </div>
   </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div> -->
-  <!-- img-carousel.component.html -->
-<div id="carouselExampleDark" class="carousel carousel-dark slide" (slideChange)="onSlideChange($event)">
-  <div class="carousel-inner">
-    <div class="carousel-item" 
-         [class.active]="i === 0" 
-         data-bs-interval="10000" 
-         *ngFor="let animal of animals; let i = index">
-      <img [src]="animal.img" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>{{animal.name}}</h5>
-        
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
-   
-
