@@ -1,0 +1,12 @@
+<!-- with help from https://codepen.io/julessmiles/pen/yJqQKK -->
+<div class="tphoto" *ngIf="animals.length > 0 && index < animals.length"
+[@cardAnimator]="animationState"
+(@cardAnimator.done)="resetAnimationState()"
+(swipeleft)='startAnimation("swipeleft")' 
+(swiperight)='startAnimation("swiperight")'
+>
+<div class="tname">{{animals[index].name}}</div>
+<img [src]="animals[index].img" title="tphoto" alt="Animal picture" />
+
+<div class="tinfo"><i class="fa fa-book" aria-hidden="true"> 0</i><i class="fa fa-users" aria-hidden="true"> 0</i></div>
+</div>
