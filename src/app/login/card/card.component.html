@@ -9,8 +9,7 @@
 <div class="tname">{{animals[index].name}}</div>
 <img [src]="animals[index].img" title="tphoto" alt="Animal picture" />
 </div>
-
-  
+ 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -20,11 +19,14 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          ...
+          <p>Gender: {{animals[index].gender}}</p>
+          <p>Main Color: {{animals[index].color}}</p>
+          <p>Age: {{animals[index].age}}</p>
+          <p>Breed: {{animals[index].breed}}</p>
+          <p>Species: {{animals[index].species}}</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
       </div>
     </div>
