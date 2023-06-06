@@ -111,3 +111,23 @@
       font-style: italic;
   }
 
+#x-img{
+    position: relative;
+    display: inline-block;
+    top: -20px;
+    left: -13px;
+}
+
+#i-img {
+    position: relative;
+    display: inline-block;
+    top: -6px;
+    left: -15px;
+}
+
+#heart-img{
+    position: relative;
+    display: inline-block;
+    top: 0px;
+    left: -14px;
+}
