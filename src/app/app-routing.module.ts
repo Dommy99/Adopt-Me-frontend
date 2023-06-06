@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './login/homepage/homepage.component';
 import { LoginImgCarouselComponent } from './mainpage/login-img-carousel/login-img-carousel.component';
 import { UserlikesComponent } from './likepage/userlikes/userlikes.component';
-
+import { AuthGuard } from './authguard.service';
 const routes: Routes = [
   {
     path: 'homepage',
@@ -15,11 +15,13 @@ const routes: Routes = [
   },
   {
     path: 'login-img-carousel',
-    component: LoginImgCarouselComponent
+    component: LoginImgCarouselComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'userlikes',
-    component: UserlikesComponent
+    component: UserlikesComponent,
+    canActivate: [AuthGuard]
   }
 
 ];
