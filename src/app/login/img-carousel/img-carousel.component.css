@@ -45,8 +45,8 @@
       -ms-border-radius: 50%;
       position: relative;
       display: inline-block;
-      top: 50px;
-      left: 25px;
+      top: 72px;
+      left: 42px;
       border: 10px solid #f0f0f0;
   }
   .tno i {
@@ -64,8 +64,8 @@
       -ms-border-radius: 50%;
       position: relative;
       display: inline-block;
-      left: 12px;
-      top: 30px;
+      left: 50px;
+      top: 40px;
       border: 10px solid #f0f0f0;
   }
   .ti .fa-info {
@@ -84,7 +84,7 @@
       position: relative;
       display: inline-block;
       top: 48px;
-      left: 0px;
+      left: 60px;
       border: 10px solid #f0f0f0;
   }
   .tyes i {
