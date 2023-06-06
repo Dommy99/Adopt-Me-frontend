@@ -48,7 +48,11 @@
       top: 72px;
       left: 42px;
       border: 10px solid #f0f0f0;
+      transition: background-color 0.3s ease;
   }
+  .tno:hover {
+    background-color: #020202;
+}
   .tno i {
       color: #ff695b;
       font-size: 80px;
@@ -67,7 +71,11 @@
       left: 50px;
       top: 40px;
       border: 10px solid #f0f0f0;
+      transition: background-color 0.3s ease;
   }
+  .ti:hover {
+    background-color: #020202;
+}
   .ti .fa-info {
       font-size: 23px;
       padding: 15px 20px;
@@ -86,7 +94,12 @@
       top: 48px;
       left: 60px;
       border: 10px solid #f0f0f0;
+      transition: background-color 0.3s ease;
   }
+
+  .tyes:hover {
+    background-color: #35cdcd ; 
+}
   .tyes i {
       color: #5de19c;
       font-size: 60px;
@@ -130,4 +143,29 @@
     display: inline-block;
     top: 0px;
     left: -14px;
+}
+
+#x-img,
+#heart-img,
+#i-img {
+    position: relative;
+    display: inline-block;
+    transition: filter 0.3s ease-in-out, background-color 0.3s ease-in-out;
+   
+}
+
+.tno:hover #x-img,
+.tyes:hover #heart-img,
+.ti:hover #i-img {
+    filter: brightness(0);
+}
+.tno:hover #x-img,
+.ti:hover #i-img {
+    filter:invert(50)
+}
+
+.tno:hover,
+.tyes:hover,
+.ti:hover {
+    cursor: pointer;
 }
