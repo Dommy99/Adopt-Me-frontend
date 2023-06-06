@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { AuthService } from 'src/app/auth.service';
 export class LoginRegisterComponent {
   form: FormGroup;
 
-  constructor(private http: HttpClient, private authService: AuthService) {
+  constructor(private http: HttpClient, private authService: AuthService, private router: Router) {
     this.form = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required])
@@ -33,10 +34,10 @@ export class LoginRegisterComponent {
         (response: any) => {
           console.log(response);
           this.authService.login(response.userId);
+          this.router.navigate(['/login-img-carousel']);  // navigate after login
         },
         (error) => console.log(error)
       );
     }
   }
-  
 }

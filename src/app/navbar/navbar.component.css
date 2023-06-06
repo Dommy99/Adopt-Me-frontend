@@ -43,3 +43,8 @@
   box-shadow: none;
   transform: translateY(0);
 }
+
+.navbar-brand {
+  flex-grow: 1;
+  text-align: center;
+}
