@@ -11,10 +11,12 @@ import { LikepageModule } from './likepage/likepage.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent  ],
+    NavbarComponent,
+    FooterComponent  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
