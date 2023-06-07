@@ -8,9 +8,9 @@
       <app-card  [parentSubject]="parentSubject" [animals]="animals">
       </app-card>
     <div class="tcontrols">
-      <div (click)='cardAnimation("swipeleft")'  class="tno"><i class="fa fa-times" aria-hidden="true"><img src="../../../assets/img/letter-x.png" width="70px" id="x-img"></i></div>
+      <div (click)='cardAnimation2("swipeleft")'  class="tno"><i class="fa fa-times" aria-hidden="true"><img src="../../../assets/img/letter-x.png" width="70px" id="x-img"></i></div>
       <div class="ti" ><i class="fa fa-info" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="../../../assets/img/letter-i.png" width="20px" id="i-img"></i></div>
-      <div (click)='cardAnimation("swiperight")' class="tyes"><i class="fa fa-heart" aria-hidden="true"><img src="../../../assets/img/heart.png" width="70px" id="heart-img"></i></div>
+      <div *ngFor="let animal of animals" (click)='cardAnimation1("swiperight", animal)' class="tyes"><i class="fa fa-heart" aria-hidden="true"><img src="../../../assets/img/heart.png" width="70px" id="heart-img"></i></div>
     </div>
   </div>
 </div>
