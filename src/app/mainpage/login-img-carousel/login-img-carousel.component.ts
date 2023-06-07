@@ -8,15 +8,15 @@ import { Animal } from '../../../app/animal/animal.module';
   templateUrl: './login-img-carousel.component.html',
   styleUrls: ['./login-img-carousel.component.css']
 })
-export class LoginImgCarouselComponent implements OnInit {
-  currentAnimal: Animal | null = null;
+export class LoginImgCarouselComponent{
+  // currentAnimal: Animal | null = null;
 
-  constructor(private http: HttpClient) {}
+  // constructor(private http: HttpClient) {}
 
-  ngOnInit(): void { 
-  }
+  // ngOnInit(): void { 
+  // }
 
-  onActiveAnimalChanged(newAnimal: Animal): void {
-    this.currentAnimal = newAnimal;
-  }
+  // onActiveAnimalChanged(newAnimal: Animal): void {
+  //   this.currentAnimal = newAnimal;
+  // }
 }
