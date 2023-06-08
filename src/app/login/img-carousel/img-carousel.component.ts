@@ -16,13 +16,9 @@ export class ImgCarouselComponent {
   likedAnimals: Animal[] = [];
   currentAnimal: Animal | null = null;
 
-
-  
-
   constructor(private http: HttpClient, private authService: AuthService) {
     this.getAnimals();
   }
-  
 
   getAnimals() {
     this.http.get<{data: Animal[], message: string}>('http://localhost:8080/api/animal/')
@@ -30,7 +26,6 @@ export class ImgCarouselComponent {
         this.animals = response.data;
       });
   }
-  // private headers = new HttpHeaders().set('Authorization', 'Bearer ' +'eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QGdtYWlsLmNvbSIsImlhdCI6MTY4NjE3NTgwMCwiZXhwIjoxNjg2MjYyMjAwfQ.66bMCM5UlpNMzrqxcIeBuLaetelGRkh3yMpdqk2tJmE' );
 
   cardAnimation1(value: string) {
     this.parentSubject.next(value);
@@ -40,30 +35,12 @@ export class ImgCarouselComponent {
         .subscribe(response => {
           this.likedAnimals.push(this.currentAnimal!);
           console.log(response);
+          this.animals = this.animals.filter(animal => animal.id !== this.currentAnimal!.id);
         });
     }
   }
-  
 
-  // cardAnimation1(value: string) {
-  //   this.parentSubject.next(value);
-  //   if (this.currentAnimal) {
-  //     this.http.post(`http://localhost:8080/api/like/${this.currentAnimal.id}`, {}).subscribe(response => {
-  //       this.likedAnimals.push(this.currentAnimal!);
-  //       console.log(response);
-  //     });
-  //   }
-  // }
-  
   cardAnimation2(value: string) {
     this.parentSubject.next(value);
   }
-
-  // likeAnimal(animal: Animal): void {
-  //   this.http.post(`http://localhost:8080/api/like/${animal.id}`, {}).subscribe(response => {
-  //     this.likedAnimals.push(animal);
-  //     console.log(response);
-      
-  //   });
-  // }
 }
