@@ -15,26 +15,6 @@
       border: 1px solid #c0c0c0;
   }
   .tbgwrap { padding: 10px; }
-  .theader { height: 65px; border-bottom: 1px solid #c0c0c0; }
-  .theader i.fa-comments {
-      color: #c0c0c0;
-      font-size: 40px;
-      display: inline-block;
-      float: right;
-      padding: 10px 20px;
-      position: relative;
-  }
-  .theader i.fa-cog {
-      color: #c0c0c0;
-      font-size: 40px;
-      display: inline-block;
-      float: left;
-      padding: 10px 20px;
-      position: relative;
-  }
-  .tlogo { width: 100px; margin: 0 auto; padding: 10px; }
-  .tlogo img { width: 100px; }
-  
   .tno {
       background-color: #fff;
       height: 120px;
@@ -104,24 +84,6 @@
       color: #5de19c;
       font-size: 60px;
       padding: 35px 30px;
-  }
-  .credit {
-      width: 400px;
-      height: auto;
-      position: relative;
-      top: 60px;
-      text-align: center;
-      background-color: #f0f0f0;
-      padding: 2px 0px;
-  }
-  .credit a {
-      font-size: 7px;
-      letter-spacing: 5px;
-      color: #c0c0c0;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-family: 'Helvetica', sans-serif;
-      font-style: italic;
   }
 
 #x-img{
