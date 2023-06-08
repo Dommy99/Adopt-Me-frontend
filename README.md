@@ -43,9 +43,10 @@ Pet adoption social media for the modern age
 - As a logged-in user, I should be able to remove animals from the animal liked list.
 
 
-# Approach
-    I started this project with a joke and a problem. The joke was about a Tinder app for animals and the problem was the discrepancies between the qualities of websites between different adoption agencies. People are looking to adopt animals almost daily and some might be turned off by poorly made websites making smaller agencies struggle even more. Younger people, who make up most of the population, are continuously looking for more approachable and streamline ways of doing things.
-    I decided to take a mobile first approach which is how more and more people are interacting with technology. This application takes full advantage of different screen sizes to give the users a better experience. This plus the added security will give users peace of mind. This will also give agencies and people looking to put an animal up for adoption peace of mind with a better alternative than making and hosting their own website.
+## Approach
+
+ -   I started this project with a joke and a problem. The joke was about a Tinder app for animals and the problem was the discrepancies between the qualities of websites between different adoption agencies. People are looking to adopt animals almost daily and some might be turned off by poorly made websites making smaller agencies struggle even more. Younger people, who make up most of the population, are continuously looking for more approachable and streamline ways of doing things.
+ -   I decided to take a mobile first approach which is how more and more people are interacting with technology. This application takes full advantage of different screen sizes to give the users a better experience. This plus the added security will give users peace of mind. This will also give agencies and people looking to put an animal up for adoption peace of mind with a better alternative than making and hosting their own website.
 
 
 - ![Planning Board.](/src/assets/img/adopt-me-planningboard.JPG)
