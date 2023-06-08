@@ -7,7 +7,7 @@ import { AuthService } from 'src/app/auth.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  constructor(private authService: AuthService) {}
+  constructor(public authService: AuthService) {}
   logout(): void {
     this.authService.logout();
     console.log(this.logout);
