@@ -32,6 +32,12 @@ export class AuthService {
     localStorage.removeItem('userId');
     this.userIdSubject.next(null);
   }
+
+  isLoggedIn(): boolean {
+    const token = localStorage.getItem('userToken');
+    return !!token;
+  }
+
   public getToken(): string {
     const token = localStorage.getItem('userToken');
     if (token === null) {
