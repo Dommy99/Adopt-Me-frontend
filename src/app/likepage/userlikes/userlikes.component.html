@@ -34,6 +34,7 @@
             <p class="animal-text">Main Color: {{ animal.color }}</p>
             <p class="animal-text">Breed: {{ animal.breed }}</p>
             <p class="animal-text">Age: {{ animal.age }}</p>
+            <div class="ti" ><i class="fa fa-info" aria-hidden="true" data-bs-toggle="modal" data-bs-target="#exampleModal"><img src="../../../assets/img/letter-i.png" width="50px" id="i-img"></i></div>
             <button
               (click)="removeAnimal(animal.id)"
               class="button-28"
@@ -42,6 +43,27 @@
               Remove
             </button>
           </div>
+          <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">{{animal.name}}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Gender: {{animal.gender}}</p>
+        <p>Main Color: {{animal.color}}</p>
+        <p>Age: {{animal.age}}</p>
+        <p>Breed: {{animal.breed}}</p>
+        <p>Species: {{animal.species}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
         </div>
       </div>
     </div>
