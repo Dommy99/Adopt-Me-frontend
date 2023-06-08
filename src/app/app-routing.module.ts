@@ -16,12 +16,12 @@ const routes: Routes = [
   {
     path: 'login-img-carousel',
     component: LoginImgCarouselComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard] // blocks untill logged in
   },
   {
     path: 'userlikes',
     component: UserlikesComponent,
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard] // blocks untill logged in
   }
 
 ];
