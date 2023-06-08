@@ -32,6 +32,13 @@ export class AuthService {
     localStorage.removeItem('userId');
     this.userIdSubject.next(null);
   }
+  public getToken(): string {
+    const token = localStorage.getItem('userToken');
+    if (token === null) {
+        throw new Error('No token found');
+    }
+    return token;
+}
 
   public get currentToken(): string | null {
     return this.tokenSubject.value;
