@@ -5,6 +5,7 @@ import * as kf from './keyframes';
 import { Animal } from '../../../app/animal/animal.module';
 import { Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -22,6 +23,7 @@ import { HttpClient } from '@angular/common/http';
 export class CardComponent implements OnInit {
 
   @Input() parentSubject: Subject<string> = new Subject<string>();
+  @Output() liked = new EventEmitter<Animal>();
   
   index = 0;
   animationState: string = '';
@@ -29,18 +31,21 @@ export class CardComponent implements OnInit {
   @Input() animals: Animal[] = [];
 
 
-  startAnimation(state: string) { // state needs to be of type string
+  startAnimation(state: string) { 
     if (!this.animationState) {
       this.animationState = state;
       if (state === "swipeleft") {
         this.index++;
       }
       if (state === "swiperight") {
-        this.likedAnimals.push(this.animals[this.index]);
+        let likedAnimal = this.animals[this.index];
+        this.likedAnimals.push(likedAnimal);
+        this.liked.emit(likedAnimal);
         this.index++;
       }
     }
   }
+  
 
   resetAnimationState() {
     this.animationState = '';
