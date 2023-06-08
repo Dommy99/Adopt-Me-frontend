@@ -1,4 +1,3 @@
-// login-img-carousel.component.ts
 import { Component } from '@angular/core';
 
 @Component({
