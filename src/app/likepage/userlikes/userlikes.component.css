@@ -43,3 +43,15 @@
     box-shadow: none;
     transform: translateY(0);
   }
+
+  .mosaic {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(350px, auto);
+    gap: 10px;
+}
+
+.mosaic-item {
+    background-size: cover;
+    background-position: center;
+}
