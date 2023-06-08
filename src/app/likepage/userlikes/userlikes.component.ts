@@ -81,11 +81,21 @@ export class UserlikesComponent implements OnInit, OnDestroy {
 // }
 
 
-  removeAnimal(id: number): void {
-    this.http.delete(`http://localhost:8080/api/like/${id}`).subscribe(response => {
-      this.getAnimals();
-    });
-  }
+removeAnimal(id: number): void {
+  let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${this.authService.getToken()}`
+  });
+
+  this.http.delete(`http://localhost:8080/api/like/${id}`, { headers: headers })
+      .subscribe(response => {
+          this.getAnimals();
+      },
+      (error) => {
+          console.error('Error:', error);
+      });
+}
+
 
   onAnimalLiked(animal: Animal) {
     this.animals.push(animal);
