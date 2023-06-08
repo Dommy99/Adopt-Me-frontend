@@ -1,26 +1,25 @@
-
-
 <div class="d-flex">
   <div id="container" class="container-md">
     <div class="p-2">
-      
-      <div class="mosaic" *ngFor="let animal of animals">
-        <img class="mosaic-item" src="{{animal.img}}" class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Pet name: {{animal.name}}</h5>
-          <p class="card-text">Adoption Location: {{animal.adoption.location}}</p>
-          <p class="card-text">Species: {{animal.species}}</p>
-          <p class="card-text">Gender: {{animal.gender}}</p>
-          <p class="card-text">Main Color: {{animal.color}}</p>
-          <p class="card-text">Breed: {{animal.breed}}</p>
-          <p class="card-text">Age: {{animal.age}}</p>
+      <div class="animal-list">
+        <div class="animal-item" *ngFor="let animal of animals">
+          <img src="{{animal.img}}" alt="..." width="70px"/>
+          <div class="animal-info">
+            <h5 class="animal-title">Pet name: {{animal.name}}</h5>
+            <p class="animal-text">Adoption Location: {{animal.adoption.location}}</p>
+            <p class="animal-text">Species: {{animal.species}}</p>
+            <p class="animal-text">Gender: {{animal.gender}}</p>
+            <p class="animal-text">Main Color: {{animal.color}}</p>
+            <p class="animal-text">Breed: {{animal.breed}}</p>
+            <p class="animal-text">Age: {{animal.age}}</p>
 
-          <p class="card-text">Contact Information:</p>
-          <p class="card-text">Number: {{animal.adoption.number}}</p>
-          <!-- name of adoption agency -->
-          <a href="#" class="card-link">{{animal.adoption.name}}</a> 
-          <a href="#" class="card-link">{{animal.adoption.email}}</a>
-          <button (click)="removeAnimal(animal.id)" class="button-28" type="submit">Remove</button>
+            <p class="animal-text">Contact Information:</p>
+            <p class="animal-text">Number: {{animal.adoption.number}}</p>
+            <!-- name of adoption agency -->
+            <a href="#" class="animal-link">{{animal.adoption.name}}</a> 
+            <a href="#" class="animal-link">{{animal.adoption.email}}</a>
+            <button (click)="removeAnimal(animal.id)" class="button-28" type="submit">Remove</button>
+          </div>
         </div>
       </div>
     </div>
