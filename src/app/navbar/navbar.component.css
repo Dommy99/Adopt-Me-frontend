@@ -48,3 +48,9 @@
   flex-grow: 1;
   text-align: center;
 }
+
+@media only screen and (max-width: 400px) {
+  .button-28{
+    width: 30%;
+  }
+}
