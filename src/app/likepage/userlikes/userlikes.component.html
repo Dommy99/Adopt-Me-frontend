@@ -6,18 +6,17 @@
           <img src="{{animal.img}}" alt="..." width="70px"/>
           <div class="animal-info">
             <h5 class="animal-title">Pet name: {{animal.name}}</h5>
+            <!-- name of adoption agency -->
+            <p class="animal-text">Contact Information:</p>
+            <p class="animal-text">Number: {{animal.adoption.number}}</p>
+            <a href="#" class="animal-link">{{animal.adoption.name}}</a> |
+            <a href="#" class="animal-link">{{animal.adoption.email}}</a>
             <p class="animal-text">Adoption Location: {{animal.adoption.location}}</p>
             <p class="animal-text">Species: {{animal.species}}</p>
             <p class="animal-text">Gender: {{animal.gender}}</p>
             <p class="animal-text">Main Color: {{animal.color}}</p>
             <p class="animal-text">Breed: {{animal.breed}}</p>
             <p class="animal-text">Age: {{animal.age}}</p>
-
-            <p class="animal-text">Contact Information:</p>
-            <p class="animal-text">Number: {{animal.adoption.number}}</p>
-            <!-- name of adoption agency -->
-            <a href="#" class="animal-link">{{animal.adoption.name}}</a> 
-            <a href="#" class="animal-link">{{animal.adoption.email}}</a>
             <button (click)="removeAnimal(animal.id)" class="button-28" type="submit">Remove</button>
           </div>
         </div>
