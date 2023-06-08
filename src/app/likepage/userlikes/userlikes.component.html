@@ -3,21 +3,44 @@
     <div class="p-2">
       <div class="animal-list">
         <div class="animal-item" *ngFor="let animal of animals">
-          <img src="{{animal.img}}" alt="..." width="70px"/>
+          <img src="{{ animal.img }}" alt="..." width="70px" />
           <div class="animal-info">
-            <h5 class="animal-title">Pet name: {{animal.name}}</h5>
+            <h5 class="animal-title">Pet name: {{ animal.name }}</h5>
             <!-- name of adoption agency -->
             <p class="animal-text">Contact Information:</p>
-            <p class="animal-text">Number: {{animal.adoption.number}}</p>
-            <button  class="button-12" role="button"><a href="" class="animal-link">{{animal.adoption.name}}</a></button> |
-            <button  class="button-12" role="button"><a href="mailto:{{animal.adoption.email}}" class="animal-link">{{animal.adoption.email}}</a></button>
-            <p class="animal-text">Adoption Location: {{animal.adoption.location}}</p>
-            <p class="animal-text">Species: {{animal.species}}</p>
-            <p class="animal-text">Gender: {{animal.gender}}</p>
-            <p class="animal-text">Main Color: {{animal.color}}</p>
-            <p class="animal-text">Breed: {{animal.breed}}</p>
-            <p class="animal-text">Age: {{animal.age}}</p>
-            <button (click)="removeAnimal(animal.id)" class="button-28" type="submit">Remove</button>
+            <p class="animal-text">Number: {{ animal.adoption.number }}</p>
+            <button class="button-12" role="button">
+              <a
+                href="{{ animal.adoption.website }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="animal-link"
+                >{{ animal.adoption.name }}</a
+              >
+            </button>
+            |
+            <button class="button-12" role="button">
+              <a
+                href="mailto:{{ animal.adoption.email }}"
+                class="animal-link"
+                >{{ animal.adoption.email }}</a
+              >
+            </button>
+            <p class="animal-text">
+              Adoption Location: {{ animal.adoption.location }}
+            </p>
+            <p class="animal-text">Species: {{ animal.species }}</p>
+            <p class="animal-text">Gender: {{ animal.gender }}</p>
+            <p class="animal-text">Main Color: {{ animal.color }}</p>
+            <p class="animal-text">Breed: {{ animal.breed }}</p>
+            <p class="animal-text">Age: {{ animal.age }}</p>
+            <button
+              (click)="removeAnimal(animal.id)"
+              class="button-28"
+              type="submit"
+            >
+              Remove
+            </button>
           </div>
         </div>
       </div>
