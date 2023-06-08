@@ -66,6 +66,8 @@
     border-bottom: 1px solid #ddd;
     padding: 10px;
     background-color: lightgray;
+    border-radius: 20px;
+    margin-block: 10px;
   }
   
   
