@@ -16,6 +16,7 @@ export interface Animal {
     number: string;
     email: string;
     name: string;
+    website: string;
   }
 }
 
