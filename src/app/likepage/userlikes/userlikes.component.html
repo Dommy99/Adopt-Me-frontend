@@ -1,8 +1,11 @@
-<div class="d-flex" >
-  <div class="row row-cols-1 row-cols-md-3 g-4" >
-    <div class="col" *ngFor="let animal of animals">
-      <div class="card">
-        <img src="{{animal.img}}" class="card-img-top" alt="..." />
+
+
+<div class="d-flex">
+  <div id="container" class="container-md">
+    <div class="p-2">
+      
+      <div class="mosaic" *ngFor="let animal of animals">
+        <img class="mosaic-item" src="{{animal.img}}" class="card-img-top" alt="..." />
         <div class="card-body">
           <h5 class="card-title">Pet name: {{animal.name}}</h5>
           <p class="card-text">Adoption Location: {{animal.adoption.location}}</p>
