@@ -35,11 +35,11 @@ Pet adoption social media for the modern age
 
 ## User-Story
 - As a user, I should be able to register.
-- As a user, I should be able to login.
+- As a user, I should be able to log in.
 - As a user, I should be able to log out.
 - As a logged-in user, I should be able to see a carousel of animals.
 - As a logged-in user, I should be able to like the animals in the carousel.
-- As a logged-in user, I should be able see a list of liked animals (these liked animals show contact information for adoption).
+- As a logged-in user, I should be able to see a list of liked animals (these liked animals show contact information for adoption).
 - As a logged-in user, I should be able to remove animals from the animal liked list.
 
 
